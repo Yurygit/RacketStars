@@ -148,10 +148,16 @@ public class MainActivity extends AppCompatActivity implements
             if (mFirebaseUser.getPhotoUrl() != null) {
                 mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
             }
+
+
         }
 
-        mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
+        startActivity(new Intent(this, MainMainActivity.class));
+        finish();
+        return;
+
+        /*mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .enableAutoManage(this /* FragmentActivity , this /* OnConnectionFailedListener *//*
                 .addApi(Auth.GOOGLE_SIGN_IN_API)
                 .build();
 
@@ -249,6 +255,7 @@ public class MainActivity extends AppCompatActivity implements
             }
         });
 
+
         mMessageRecyclerView.setLayoutManager(mLinearLayoutManager);
         mMessageRecyclerView.setAdapter(mFirebaseAdapter);
 
@@ -268,7 +275,7 @@ public class MainActivity extends AppCompatActivity implements
                 new FirebaseRemoteConfigSettings.Builder()
                 .setDeveloperModeEnabled(true)
                 .build();
-
+         /*
         // Define default config values. Defaults are used when fetched config values are not
         // available. Eg: if an error occurred fetching values from the server.
         Map<String, Object> defaultConfigMap = new HashMap<>();
@@ -325,6 +332,7 @@ public class MainActivity extends AppCompatActivity implements
                 mFirebaseAnalytics.logEvent(MESSAGE_SENT_EVENT, null);
             }
         });
+        */
     }
 
     private Action getMessageViewAction(FriendlyMessage friendlyMessage) {
