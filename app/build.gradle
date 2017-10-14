@@ -1,11 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('C:/Users/gavrikov/.android/debug.keystore')
+            storePassword 'android'
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.example.gavrikov.myapplication"
-        minSdkVersion 15
+        applicationId "com.bladesappfest.firebase.codelab.racketstars"
+        minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -17,14 +25,40 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+    }
 }
 
-/*dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+dependencies {
     testCompile 'junit:junit:4.12'
-}*/
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    // Google
+    compile 'com.google.android.gms:play-services-auth:11.2.0'
+    // Firebase
+    compile 'com.google.firebase:firebase-analytics:11.2.0'
+    compile 'com.google.firebase:firebase-database:11.2.0'
+    compile 'com.google.firebase:firebase-storage:11.2.0'
+    compile 'com.google.firebase:firebase-auth:11.2.0'
+    compile 'com.google.firebase:firebase-config:11.2.0'
+    compile 'com.google.android.gms:play-services-appinvite:11.2.0'
+    compile 'com.google.firebase:firebase-messaging:11.2.0'
+    compile 'com.google.android.gms:play-services-ads:11.2.0'
+    compile 'com.google.firebase:firebase-appindexing:11.2.0'
+    compile 'com.google.firebase:firebase-crash:11.2.0'
+    compile 'com.google.firebase:firebase-analytics:11.2.0'
+    // Firebase UI
+    compile 'com.firebaseui:firebase-ui-database:1.2.0'
+    // Testing dependencies
+    androidTestCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support:support-annotations:25.3.1'
+}
+
+apply plugin: 'com.google.gms.google-services'
