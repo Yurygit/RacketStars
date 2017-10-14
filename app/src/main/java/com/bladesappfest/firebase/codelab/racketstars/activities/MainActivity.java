@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.bladesappfest.firebase.codelab.racketstars;
+package com.bladesappfest.firebase.codelab.racketstars.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -39,6 +39,9 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bladesappfest.firebase.codelab.racketstars.CodelabPreferences;
+import com.bladesappfest.firebase.codelab.racketstars.FriendlyMessage;
+import com.bladesappfest.firebase.codelab.racketstars.R;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.ads.AdRequest;
