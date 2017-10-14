@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "592341054995",
+    "firebase_url": "https://racketstars.firebaseio.com",
+    "project_id": "racketstars",
+    "storage_bucket": "racketstars.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592341054995:android:805b0aed935b3f9e",
+        "android_client_info": {
+          "package_name": "com.bladesappfest.firebase.codelab.racketstars"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592341054995-62jef3dqeb2b2narj3ksuh63h451n29c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bladesappfest.firebase.codelab.racketstars",
+            "certificate_hash": "51ea40a5ee407987d4490d3205450fef8387e1ea"
+          }
+        },
+        {
+          "client_id": "592341054995-ir042krk494b4c9rmqb0oapcdcll8b4c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzzpuGx9pFZ5h8-N8xcbLUFReg6ciJZdA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592341054995-ir042krk494b4c9rmqb0oapcdcll8b4c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
